@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+      <a href="login">
+          <ion-icon name='arrow-back' color="danger"></ion-icon></a>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Register with City Movies Account</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name='person' slot='start'></ion-icon>
+          <ion-label position="floating"></ion-label>
+          <ion-input type='text' placeholder='Full Name' [(ngModel)]="customer.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='key' slot='start'></ion-icon>
+            <ion-label position="floating"></ion-label>
+            <ion-input type='password' placeholder='Password' [(ngModel)]="customer.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='home' slot='start'></ion-icon>
+            <ion-label position="floating"></ion-label>
+            <ion-input type='text' placeholder='Address' [(ngModel)]="customer.address"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='mail' slot='start'></ion-icon>
+            <ion-label position="floating"></ion-label>
+            <ion-input type='email' placeholder='Email' [(ngModel)]="customer.email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='phone-portrait' slot='start'></ion-icon>
+            <ion-label position="floating"></ion-label>
+            <ion-input type='phone' placeholder='Mobile Number' [(ngModel)]="customer.phone"></ion-input>
+        </ion-item>
+        <ion-button style = 'margin-top: 10px;' expand ='full' color="danger" (click)="addCustomer(customer)">Register</ion-button>
+              <p style="text-align: center">Already have an account? 
+                  <a href="login">Login</a></p>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

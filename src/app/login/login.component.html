@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+  
+      <ion-item>
+          <ion-icon name='person' slot='start'></ion-icon>
+          <ion-label position="floating"></ion-label>
+          <ion-input type="text"  placeholder="Registered E-mail ID" [(ngModel)]="customer.email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='key' slot='start'></ion-icon>
+          <ion-label position="floating"></ion-label>
+          <ion-input type="password" placeholder="Valid Password" [(ngModel)]="customer.password"></ion-input>
+        </ion-item>
+        <p style="text-align: right; padding-top:10px">
+          <a href="forgot-password">Forgot Password?</a>
+        </p>
+        <ion-button expand ='full' color="danger" (click)="doLogin(customer)">Login</ion-button>
+        <p style="text-align: center">Dont have an account yet? 
+          <a href="register">Register</a></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

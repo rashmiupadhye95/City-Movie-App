@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <a href="booking">
+            <ion-icon name='arrow-back' color="danger"></ion-icon></a>
+      <ion-title>
+        Payment
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-card>
+          <ion-card-header>
+             <ion-card-title>Enter Card Details</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-input placeholder="Enter Card Number"></ion-input>
+            </ion-item>
+              <ion-item>
+                <ion-datetime  display-format="MM/YYYY" placeholder="Expiry Month/Year"></ion-datetime>
+              </ion-item>
+              <ion-item>
+              <ion-input placeholder="CVV"></ion-input>
+            </ion-item>
+            <ion-button expand ='full' color="danger" (click)="paymentDone()" >Submit</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <a href="list-movies">
+            <ion-icon name='arrow-back' color="danger"></ion-icon></a>
+      <ion-title>
+        Create Booking
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+ 
+ <ion-card>
+        <ion-img src="{{movie.image_url}}"></ion-img>
+    <ion-card-header>
+       <ion-card-title>{{movie.name}} <ion-badge color='danger'> 89%</ion-badge></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <span>Rating: {{movie.rating}}/5</span> | <span style="text-align:right"> Production: {{movie.production_house}}</span>
+        <p><span>Genre: {{movie.type}}</span></p>
+        <ion-list>
+                <ion-list-header></ion-list-header>
+                <ion-item>
+                  <ion-label>Select No of Seats</ion-label>
+                  <ion-select value="1" okText="Done" cancelText="Cancel">
+                    <ion-select-option value="1">1</ion-select-option>
+                    <ion-select-option value="2">2</ion-select-option>
+                    <ion-select-option value="3">3</ion-select-option>
+                    <ion-select-option value="4">4</ion-select-option>
+                    <ion-select-option value="5">5</ion-select-option>
+                    <ion-select-option value="6">6</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+              <ion-item>
+                    <ion-label>Date</ion-label>
+                    <ion-datetime display-format="DD MM YYYY"></ion-datetime>
+              </ion-item>
+        <ion-button expand ='full' color="danger" (click)=doPayment()>Continue Booking</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
