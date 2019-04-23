@@ -18,6 +18,7 @@ import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PaymentDoneComponent } from './payment.done/payment.done.component';
 import { OffersComponent } from './offers/offers.component';
+import { Camera } from '@ionic-native/camera/ngx';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { OffersComponent } from './offers/offers.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera
   ],
   bootstrap: [AppComponent]
 })

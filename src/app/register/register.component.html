@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color='danger'>
       <a href="login">
           <ion-icon name='arrow-back' color="danger"></ion-icon></a>
     <ion-title>
@@ -39,6 +39,7 @@
             <ion-label position="floating"></ion-label>
             <ion-input type='phone' placeholder='Mobile Number' [(ngModel)]="customer.phone"></ion-input>
         </ion-item>
+        <br/>
         <ion-button style = 'margin-top: 10px;' expand ='full' color="danger" (click)="addCustomer(customer)">Register</ion-button>
               <p style="text-align: center">Already have an account? 
                   <a href="login">Login</a></p>
